@@ -6,7 +6,7 @@ Clone the repository from:
 
 ```sh
 $ git clone https://github.com/rahulagarwal86/tigercard-poc.git
-$ cd sample-django-app
+$ cd tigercard-poc
 ```
 
 Create a virtual environment to install dependencies in and activate it:
