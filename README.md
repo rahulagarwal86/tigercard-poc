@@ -6,7 +6,7 @@ Clone the repository from:
 
 ```sh
 $ git clone https://github.com/rahulagarwal86/tigercard-poc.git
-$ cd tigercard-poc
+$ cd sample-django-app
 ```
 
 Create a virtual environment to install dependencies in and activate it:
@@ -35,7 +35,7 @@ In order to calculate the fare for an individual, use any rest client. Below is 
 
 `POST /api/v1/calculate-fare/`
 
-    curl -i -H 'Accept: application/json' -d 'journey_list=[{"date-time": "2020-01-01 09:00:00", "from_zone": 3, "to_zone":2},]' http://localhost:8000/api/v1/calculate-fare/
+    curl -i -H 'Accept: application/json' -d 'journey_list=[{"date-time": "2020-01-01 09:00:00", "from_zone": 2, "to_zone":2},]' http://localhost:8000/api/v1/calculate-fare/
 
 ### Response
 
@@ -48,7 +48,8 @@ In order to calculate the fare for an individual, use any rest client. Below is 
 
     {'total_fare': 30}
 
-##API Payload
+## API Payload
+
 `Method: POST`
 
 `URL: /api/v1/calculate-fare/`

@@ -39,6 +39,7 @@ class FairCalculatorAPI(APIView):
     Response: {"total_fare": <Calculated fare of an individual>}
     """
 
+    # Static method to raise validation error.
     @staticmethod
     def raise_error(error_message):
         raise ValidationError(error_message)
@@ -75,7 +76,7 @@ class FairCalculatorAPI(APIView):
             for time_range in peak_hours:
                 start_at = datetime.datetime.strptime(time_range.get('start'), "%H:%M")
                 end_at = datetime.datetime.strptime(time_range.get('end'), "%H:%M")
-                if start_at.time() <= time_of_day <= end_at.time():
+                if start_at.time() <= time_of_day < end_at.time():
                     in_peak = True
                     break
 
